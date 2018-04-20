@@ -3,6 +3,6 @@
 @section('content')
 
 
-<a href="/todos">Visit My TODOS</a>
+<a href="/todoss">Visit My TODOS</a>
 
     @stop

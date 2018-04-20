@@ -52,7 +52,7 @@ class TodosController extends Controller
 
         Session::flash('success','Your Todo was updated');
 
-        return redirect()->route('todos');
+        return redirect()->route('todoss');
     }
 
     public function completed($id){
@@ -67,3 +67,4 @@ class TodosController extends Controller
 
     }
 }
+
