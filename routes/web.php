@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/new',
-    ['uses' => 'PagesController@new']
-    );
+
 
 Route::get('/todoss', [
     'uses' => 'TodosController@index',
@@ -25,7 +23,7 @@ Route::get('/todoss', [
     ]
 );
 
-Route::post('create/todo',[
+Route::post('/create/todo',[
     'uses' => 'TodosController@store'
 ]);
 

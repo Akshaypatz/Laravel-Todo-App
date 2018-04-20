@@ -2,9 +2,27 @@
 @section('content')
 
 
-    <div class="row">
 
-        <div class="col-lg-6 col-lg-offset-3">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+
+    <style type="text/css">
+        .akshay {
+
+            margin: 0 auto;
+
+        }
+        .aku{
+            max-height: 700px;
+            overflow-y:scroll;
+        }
+    </style>
+
+    <div class="row">
+      <div class="akshay">
+        <div class="col-lg-6 col-lg-offset-3" >
 
 
             <form action="/create/todo" method="post">
@@ -16,10 +34,13 @@
             </form>
 
         </div>
+      </div>
     </div>
 
 
     <hr>
+<div class="container">
+    <div class="aku">
 
     @foreach($todo as $todo)
 
@@ -33,7 +54,13 @@
             <span class="text-success">Mark As Completed</span>
             @endif
 
+       <button class="btn btn-small btn-basic"> Created at {{ $todo->created_at }}</button>
+
         <hr>
 
     @endforeach
+    </div>
+</div>
+
+
     @stop
