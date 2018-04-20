@@ -11,7 +11,8 @@ class TodosController extends Controller
     //
     public function index(){
 
-        $todos = Todo::all();
+        $todos = Todo::orderBy('created_at', 'desc')->get();
+
         return view('todos')->with('todo',$todos);
     }
 
