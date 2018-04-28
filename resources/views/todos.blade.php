@@ -10,13 +10,13 @@
 
     <style type="text/css">
         .akshay {
-
+            padding-top: 100px;
             margin: 0 auto;
 
         }
         .aku{
             max-height: 700px;
-            overflow-y:scroll;
+            overflow-y: auto;
         }
     </style>
 
@@ -50,6 +50,11 @@
 
         @if(!$todo->completed)
             <a href="{{ route('todos.completed',['id' => $todo->id]) }}" class="btn btn-xs btn-success">Mark as completed</a>
+
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Mark as completed</label>
+            </div>
+
           @else
             <span class="text-success">Mark As Completed</span>
             @endif

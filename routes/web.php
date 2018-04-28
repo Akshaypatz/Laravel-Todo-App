@@ -17,9 +17,9 @@ Route::get('/', function () {
 
 
 
-Route::get('/todoss', [
+Route::get('/todos', [
     'uses' => 'TodosController@index',
-        'as' => 'todoss'
+        'as' => 'todos'
     ]
 );
 
